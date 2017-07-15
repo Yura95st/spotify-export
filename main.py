@@ -16,7 +16,6 @@ def get_playlists(token, username):
     playlists = sp.user_playlists(username)
     for playlist in playlists['items']:
         if playlist['owner']['id'] != username:
-            print(playlist)
             continue
 
         results = sp.user_playlist(username, playlist['id'],
